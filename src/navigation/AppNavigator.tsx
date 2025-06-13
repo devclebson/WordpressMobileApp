@@ -4,16 +4,13 @@ import BookmarksPage from "@screens/BookmarksPage";
 import CategoriesPage from "@screens/CategoriesPage";
 import ExplorePage from "@screens/ExplorePage";
 import React from "react";
-
 const Tab = createBottomTabNavigator();
-
 const AppNavigator: React.FC = () => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
-
           if (route.name === "Explore") {
             iconName = focused ? "home" : "home-outline";
           } else if (route.name === "Categories") {
@@ -33,5 +30,4 @@ const AppNavigator: React.FC = () => {
     </Tab.Navigator>
   );
 };
-
 export default AppNavigator;
